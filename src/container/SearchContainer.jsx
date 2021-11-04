@@ -1,25 +1,31 @@
 import React, { Component } from 'react';
 import { SearchForm } from '../presentation/SearchForm';
+import { FetchApi } from '../services/FetchApi';
 
 class SearchContainer extends Component {
     state = {
         urlSearch: '',
         method: '',
-        jsonBody: {}
+        jsonBody: {},
+        data: []
     }
 
-    // handleSubmit = async () => {
-    // }
+    handleSubmit = async (event) => {
+        event.preventDefault()
+        const retrieveData = await FetchApi(this.state.urlSearch)
+        this.setState({data: retrieveData})
+    }
+
     handleSearch = ({ target }) => {
-        this.setState({urlSearch: target.value })
+        this.setState({ urlSearch: target.value })
     }
 
     render() {
-        console.log('search', this.state.urlSearch)
+        console.log('data', this.state.data)
         return (
             <>
                 <h1>RESTless</h1>
-                <SearchForm search={this.handleSearch} />
+                <SearchForm search={this.handleSearch} submit={this.handleSubmit}/>
             </>
         )
     }

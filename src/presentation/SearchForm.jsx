@@ -1,9 +1,9 @@
 import React from 'react';
 
-export const SearchForm = ({ search }) => {
+export const SearchForm = ({ search, submit }) => {
     return (
         <>
-                <form>
+                <form onSubmit={submit}>
                     <input onChange={search} placeholder="URL"/>
                         <div>
                             <label name="search">GET
