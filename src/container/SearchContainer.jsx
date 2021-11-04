@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Data } from '../presentation/Data';
 import { SearchForm } from '../presentation/SearchForm';
 import { FetchApi } from '../services/FetchApi';
 
@@ -21,11 +22,11 @@ class SearchContainer extends Component {
     }
 
     render() {
-        console.log('data', this.state.data)
         return (
             <>
                 <h1>RESTless</h1>
                 <SearchForm search={this.handleSearch} submit={this.handleSubmit}/>
+                <Data data={this.state.data}/>
             </>
         )
     }
