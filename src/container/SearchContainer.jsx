@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { SearchForm } from '../presentation/SearchForm';
 
 class SearchContainer extends Component {
     state = {
@@ -6,7 +7,10 @@ class SearchContainer extends Component {
     }
     render() {
         return (
-            <h1>Hello from container</h1>
+            <>
+                <h1>RESTless</h1>
+                <SearchForm />
+            </>
         )
     }
 }
