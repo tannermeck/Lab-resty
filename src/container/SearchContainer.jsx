@@ -13,7 +13,7 @@ class SearchContainer extends Component {
 
     handleSubmit = async (event) => {
         event.preventDefault()
-        const retrieveData = await FetchApi(this.state.urlSearch)
+        const retrieveData = await FetchApi(this.state.urlSearch, this.state.method, this.state.jsonBody)
         this.setState({data: retrieveData})
     }
 
