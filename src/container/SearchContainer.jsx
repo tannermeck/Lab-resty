@@ -34,7 +34,9 @@ class SearchContainer extends Component {
                 <h1>RESTless</h1>
                 <SearchForm search={this.handleSearch} submit={this.handleSubmit} radioChange={this.handleRadioChange} jsonTextField={this.handleJsonText}/>
                 <Data data={this.state.data}/>
+                {localStorage.getItem('STORE') &&
                 <SearchHistory />
+                }
             </>
         )
     }
