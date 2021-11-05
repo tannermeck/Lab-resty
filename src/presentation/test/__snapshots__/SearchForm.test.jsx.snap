@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render a search form it should render a component containing a form with an input, 5 radio buttons, and a button 1`] = `
+<DocumentFragment>
+  <form>
+    <input
+      placeholder="URL"
+    />
+    <div>
+      <label
+        name="search"
+      >
+        GET
+        <input
+          name="search"
+          type="radio"
+          value="GET"
+        />
+      </label>
+      <label
+        name="search"
+      >
+        POST
+        <input
+          name="search"
+          type="radio"
+          value="POST"
+        />
+      </label>
+      <label
+        name="search"
+      >
+        PUT
+        <input
+          name="search"
+          type="radio"
+          value="PUT"
+        />
+      </label>
+      <label
+        name="search"
+      >
+        PATCH
+        <input
+          name="search"
+          type="radio"
+          value="PATCH"
+        />
+      </label>
+      <label
+        name="search"
+      >
+        DELETE
+        <input
+          name="search"
+          type="radio"
+          value="DELETE"
+        />
+      </label>
+      <button>
+        Go!
+      </button>
+    </div>
+    <textarea
+      placeholder="Raw JSON Body"
+    />
+  </form>
+</DocumentFragment>
+`;
