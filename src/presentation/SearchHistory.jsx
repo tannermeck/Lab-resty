@@ -2,12 +2,11 @@ import React from 'react';
 
 export const SearchHistory = () => {
     const item = localStorage.getItem('STORE');
-    console.log(item)
     const array = JSON.parse(item);
-    console.log(array)
+    console.log("arr", array)
     const object = array.map(obj => {
-        console.log(obj)
-        console.log('split', obj.split(', '))
+        console.log('OBJ', typeof(obj))
+        // console.log('split', obj.split("}"))
         return (
         <li id={obj}>{obj}</li>
         )
