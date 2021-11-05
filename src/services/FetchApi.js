@@ -12,7 +12,7 @@ export const FetchApi = async (url, method, jsonBody) => {
         const site = await fetch(url, {
         method: `${method}`,
         headers: {
-            'Content-type': 'application/json; charset=UTF-8',
+            'Content-type': 'application/json',
         },
         body: JSON.stringify(jsonBody)
     });
