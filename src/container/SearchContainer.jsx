@@ -8,12 +8,11 @@ class SearchContainer extends Component {
         urlSearch: '',
         method: '',
         jsonBody: {},
-        data: []
+        data: [{"Hello": "I am bored. PLEASE make a fetch!"}],
     }
 
     handleSubmit = async (event) => {
         event.preventDefault()
-        console.log('String')
         const retrieveData = await FetchApi(this.state.urlSearch, this.state.method, this.state.jsonBody)
         this.setState({data: retrieveData})
     }

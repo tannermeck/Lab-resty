@@ -1,24 +1,47 @@
 import React from 'react';
 
 export const FetchApi = async (url, method, jsonBody) => {
-    console.log('Method', method, 'body', JSON.stringify(jsonBody))
+    let arr = []
+    
+    if (method === ''){
+        let prev = localStorage.getItem('STORE');
+        let storage = `{method: GET, url: ${url}}`
+        if (prev){
+            const json = JSON.parse(prev);
+            json.push(storage)
+            localStorage.setItem('STORE', JSON.stringify(json))
+        } else { 
+            arr.push(storage)
+            localStorage.setItem('STORE', JSON.stringify(arr))
+        }
+    } else {
+        let prev = localStorage.getItem('STORE');
+        let storage = `{method: ${method}, url: ${url}}`
+        if (prev){
+            const json = JSON.parse(prev);
+            json.push(storage)
+            localStorage.setItem('STORE', JSON.stringify(json))
+        } else { 
+            arr.push(storage)
+            localStorage.setItem('STORE', JSON.stringify(arr))
+        }
+    }
+
+
     if (method === '' || method === 'GET') {
         const site = await fetch(url);
         const data = await site.json();
         return data;
     }
     else if (method !== '' || method !== 'GET'){
-        // console.log('url', url)
         const site = await fetch(url, {
-        method: `${method}`,
+        method: method,
         headers: {
             'Content-type': 'application/json',
         },
-        body: JSON.stringify(jsonBody)
+        body: jsonBody
     });
-    console.log('site', site)
         const data = await site.json();
-        console.log('DATA', data)
         return data; 
 }
 }

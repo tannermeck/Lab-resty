@@ -23,7 +23,7 @@ export const SearchForm = ({ search, submit, radioChange, jsonTextField }) => {
                             </label>
                             <button>Go!</button>
                         </div>
-                    <input placeholder="Raw JSON Body" onChange={jsonTextField}/>
+                    <textarea placeholder="Raw JSON Body" onChange={jsonTextField}/>
                 </form>
         </>
         )
