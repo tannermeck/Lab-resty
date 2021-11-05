@@ -27,7 +27,6 @@ export const FetchApi = async (url, method, jsonBody) => {
         }
     }
 
-
     if (method === '' || method === 'GET') {
         const site = await fetch(url);
         const data = await site.json();
