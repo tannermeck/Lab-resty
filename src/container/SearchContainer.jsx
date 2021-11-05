@@ -3,6 +3,7 @@ import { Data } from '../presentation/Data';
 import { SearchForm } from '../presentation/SearchForm';
 import { SearchHistory } from '../presentation/SearchHistory';
 import { FetchApi } from '../services/FetchApi';
+import './searchContainer.css';
 
 class SearchContainer extends Component {
     state = {

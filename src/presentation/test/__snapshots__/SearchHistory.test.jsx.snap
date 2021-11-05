@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a list of methods and urls should render a list from local storage 1`] = `
+<DocumentFragment>
+  <ul>
+    <li>
+      <p>
+        GET
+      </p>
+      <p>
+        www.me.com
+      </p>
+    </li>
+  </ul>
+</DocumentFragment>
+`;

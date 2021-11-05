@@ -5,7 +5,7 @@ export const FetchApi = async (url, method, jsonBody) => {
     
     if (method === ''){
         let prev = localStorage.getItem('STORE');
-        let storage = `{method: GET, url: ${url}}`
+        let storage = {method: 'GET', url: url}
         if (prev){
             const json = JSON.parse(prev);
             json.push(storage)
@@ -16,7 +16,7 @@ export const FetchApi = async (url, method, jsonBody) => {
         }
     } else {
         let prev = localStorage.getItem('STORE');
-        let storage = `{method: ${method}, url: ${url}}`
+        let storage = {method: method, url: url}
         if (prev){
             const json = JSON.parse(prev);
             json.push(storage)

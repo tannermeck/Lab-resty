@@ -1,4 +1,5 @@
 import React from 'react';
+import './searchForm.css';
 
 export const SearchForm = ({ search, submit, radioChange, jsonTextField }) => {
     return (

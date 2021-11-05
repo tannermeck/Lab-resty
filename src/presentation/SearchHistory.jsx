@@ -1,14 +1,16 @@
 import React from 'react';
+import { Search } from './Search';
 
 export const SearchHistory = () => {
     const item = localStorage.getItem('STORE');
     const array = JSON.parse(item);
-    console.log("arr", array)
     const object = array.map(obj => {
-        console.log('OBJ', typeof(obj))
-        // console.log('split', obj.split("}"))
         return (
-        <li id={obj}>{obj}</li>
+        <li key={obj.url}>
+            <Search 
+                verb={obj.method}
+                link={obj.url}/>
+        </li>
         )
     })
     return <ul>{object}</ul>
