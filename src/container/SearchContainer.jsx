@@ -13,6 +13,7 @@ class SearchContainer extends Component {
 
     handleSubmit = async (event) => {
         event.preventDefault()
+        console.log('String')
         const retrieveData = await FetchApi(this.state.urlSearch, this.state.method, this.state.jsonBody)
         this.setState({data: retrieveData})
     }
@@ -20,12 +21,18 @@ class SearchContainer extends Component {
     handleSearch = ({ target }) => {
         this.setState({ urlSearch: target.value })
     }
+    handleRadioChange = ({ target }) => {
+        this.setState({ method: target.value})
+    }
+    handleJsonText = ({target}) => {
+        this.setState({jsonBody: target.value})
+    }
 
     render() {
         return (
             <>
                 <h1>RESTless</h1>
-                <SearchForm search={this.handleSearch} submit={this.handleSubmit}/>
+                <SearchForm search={this.handleSearch} submit={this.handleSubmit} radioChange={this.handleRadioChange} jsonTextField={this.handleJsonText}/>
                 <Data data={this.state.data}/>
             </>
         )
