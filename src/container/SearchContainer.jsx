@@ -31,14 +31,20 @@ class SearchContainer extends Component {
 
     render() {
         return (
-            <>
-                <h1>RESTless</h1>
-                <SearchForm search={this.handleSearch} submit={this.handleSubmit} radioChange={this.handleRadioChange} jsonTextField={this.handleJsonText}/>
-                <Data data={this.state.data}/>
+            <div className="container" style={{gridTemplateAreas: `'header header header' 'li body body' 'li body, body'` }}>
+                <div className="header">
+                    <h1>RESTless</h1>
+                </div>
+                <div className="body">
+                    <SearchForm search={this.handleSearch} submit={this.handleSubmit} radioChange={this.handleRadioChange} jsonTextField={this.handleJsonText}/>
+                    <Data data={this.state.data}/>
+                </div>
+                <div className="li">
                 {localStorage.getItem('STORE') &&
                 <SearchHistory />
                 }
-            </>
+                </div>
+            </div>
         )
     }
 }

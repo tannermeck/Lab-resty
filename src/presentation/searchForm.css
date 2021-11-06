@@ -1,9 +1,19 @@
-/* input[type=radio] {
+input[type="radio"] {
     display:none;   
 }
-input[type=radio]:hover {
-    cursor: pointer;
-} */
-/* label {
+label:active {
     background-color: #204060;
+}
+label:hover {
+    cursor: pointer;
+}
+input[type="radio"]:checked + label:active {
+    background-color:#204060;
+}
+
+label {
+    padding-right: 10px;
+}
+/* .GET {
+    background-color: blue;
 } */

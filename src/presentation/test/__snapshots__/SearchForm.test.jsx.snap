@@ -8,50 +8,55 @@ exports[`should render a search form it should render a component containing a f
     />
     <div>
       <label
-        name="search"
+        for="GET"
       >
         GET
         <input
+          id="GET"
           name="search"
           type="radio"
           value="GET"
         />
       </label>
       <label
-        name="search"
+        for="POST"
       >
         POST
         <input
+          id="POST"
           name="search"
           type="radio"
           value="POST"
         />
       </label>
       <label
-        name="search"
+        for="PUT"
       >
         PUT
         <input
+          id="PUT"
           name="search"
           type="radio"
           value="PUT"
         />
       </label>
       <label
-        name="search"
+        for="PATCH"
       >
         PATCH
         <input
+          id="PATCH"
           name="search"
           type="radio"
           value="PATCH"
         />
       </label>
       <label
-        name="search"
+        for="DELETE"
       >
         DELETE
         <input
+          id="DELETE"
           name="search"
           type="radio"
           value="DELETE"
