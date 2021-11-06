@@ -10,11 +10,11 @@ describe('it should display a todo', () => {
         userEvent.type(urlInput, 'https://jsonplaceholder.typicode.com/todos/1')
         const submit = await screen.findByRole('button');
         userEvent.click(submit);
-        return waitFor(() => {
+        await waitFor(() => {
             const data = screen.getAllByText('root', {exact: false})
             expect(data).toHaveLength(1);
         })
-        // const ul = await screen.findByRole('list')
-        // expect(ul).toMatchSnapshot();
+        const ul = await screen.findByRole('list')
+        expect(ul).toMatchSnapshot();
     })
 })
