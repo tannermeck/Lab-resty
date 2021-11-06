@@ -3,7 +3,7 @@ import { Data } from '../presentation/Data';
 import { SearchForm } from '../presentation/SearchForm';
 import { SearchHistory } from '../presentation/SearchHistory';
 import { FetchApi } from '../services/FetchApi';
-import './searchContainer.css';
+import style from './searchContainer.css';
 
 class SearchContainer extends Component {
     state = {
@@ -31,15 +31,15 @@ class SearchContainer extends Component {
 
     render() {
         return (
-            <div className="container" style={{gridTemplateAreas: `'header header header' 'li body body' 'li body, body'` }}>
-                <div className="header">
+            <div className={style.container}>
+                <div className={style.header}>
                     <h1>RESTless</h1>
                 </div>
-                <div className="body">
+                <div className={style.body}>
                     <SearchForm search={this.handleSearch} submit={this.handleSubmit} radioChange={this.handleRadioChange} jsonTextField={this.handleJsonText}/>
                     <Data data={this.state.data}/>
                 </div>
-                <div className="li">
+                <div className={style.li}>
                 {localStorage.getItem('STORE') &&
                 <SearchHistory />
                 }
@@ -49,3 +49,4 @@ class SearchContainer extends Component {
     }
 }
 export default SearchContainer;
+// style={{gridTemplateAreas: `'header header header' 'li body body' 'li body, body'` }}

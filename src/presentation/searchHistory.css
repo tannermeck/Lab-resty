@@ -1,0 +1,14 @@
+ul {
+    background-color: lightgray;
+    margin: 0px;
+    padding: 0px;
+}
+li {
+    list-style: none;
+    background-color: #204060;
+    color: white;
+    font-family: sans-serif;
+    margin-right: 5px;
+    border-radius: 5px;
+    font-size: 1rem;
+}

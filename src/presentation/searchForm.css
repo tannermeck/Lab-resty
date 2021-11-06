@@ -10,10 +10,17 @@ label:hover {
 input[type="radio"]:checked + label:active {
     background-color:#204060;
 }
-
-label {
-    padding-right: 10px;
+div {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
-/* .GET {
-    background-color: blue;
-} */
+label {
+    padding-right: 15px;
+}
+form {
+    background-color: lightgray;
+    width: 100vw;
+}
+label + input[type="text"] {
+    width: 100vw;
+}
