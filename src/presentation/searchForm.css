@@ -1,0 +1,27 @@
+input[type="radio"] {
+    display:none;   
+}
+label:active {
+    background-color: #204060;
+}
+label:hover {
+    cursor: pointer;
+}
+input[type="radio"]:checked + label:active {
+    background-color:#204060;
+}
+div {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+label {
+    padding-right: 15px;
+}
+form {
+    background-color: lightgray;
+    width: 100vw;
+    padding-top: 10px;
+}
+label + input[type="text"] {
+    width: 100vw;
+}

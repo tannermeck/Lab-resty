@@ -1,5 +1,8 @@
 import React from 'react';
+import SearchContainer from '../../container/SearchContainer';
 
 export default function App() {
-  return <h1>Hello World</h1>;
+  return (
+      <SearchContainer />
+  )
 }

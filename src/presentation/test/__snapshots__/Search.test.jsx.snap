@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render a list from local storage it should render a list containing method and url 1`] = `
+<DocumentFragment>
+  <p>
+    POST
+  </p>
+  <p>
+    www.me.com
+  </p>
+</DocumentFragment>
+`;

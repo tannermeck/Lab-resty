@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it should display a todo should list one todo by its id 1`] = `
+<ul>
+  <li>
+    <p>
+      GET
+    </p>
+    <p>
+      https://jsonplaceholder.typicode.com/todos/1
+    </p>
+  </li>
+</ul>
+`;
