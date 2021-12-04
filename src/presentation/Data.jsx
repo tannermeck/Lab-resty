@@ -5,7 +5,7 @@ import './data.css';
 export const Data = ({data}) => {
     return (
         <section>
-            <ReactJson src={data} />
+            <ReactJson src={data} style={{ 'background-color': 'white'}} />
         </section>
     )
 }
