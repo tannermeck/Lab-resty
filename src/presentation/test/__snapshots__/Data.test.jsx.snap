@@ -5,7 +5,7 @@ exports[`should render a data component it should render an object with reactjso
   <section>
     <div
       class="react-json-view"
-      style="font-family: monospace; cursor: default; background-color: rgba(0, 0, 0, 0); position: relative;"
+      style="font-family: monospace; cursor: default; background-color: white; position: relative;"
     >
       <div
         class="pretty-json-container object-container"
